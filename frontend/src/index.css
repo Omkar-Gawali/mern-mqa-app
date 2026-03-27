@@ -1,0 +1,14 @@
+.register-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .register-container {
+    max-width: 90%;
+    padding: 1.5rem 1rem;
+  }
+}
