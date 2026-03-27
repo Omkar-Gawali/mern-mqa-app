@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/authContext";
 import toast from "react-hot-toast";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -359,7 +358,6 @@ const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const { auth, setAuth } = useAuth();
 
   /* which fields are filled — drives step indicator */
   const step = email ? (answer ? (newPassword ? 3 : 2) : 1) : 0;
